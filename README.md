@@ -1,53 +1,78 @@
-# AI-CV-LinkedIn-Enhancement-Chatbot
-AI-powered RAG chatbot for analyzing and improving CVs &amp; LinkedIn profiles with personalized ATS optimization and professional branding recommendations.
-
 # AI CV & LinkedIn Enhancement Chatbot
 
-An AI-powered chatbot that analyzes and improves CVs and LinkedIn profiles using Retrieval-Augmented Generation (RAG).
+An AI-powered career assistant that analyzes and improves CVs and LinkedIn profiles using Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and semantic document retrieval.
 
-## Overview
+The chatbot provides personalized recommendations for CV improvement, LinkedIn profile optimization, ATS compatibility, keyword optimization, professional summaries, and career branding.
 
-This project provides personalized recommendations to help users improve their CVs and LinkedIn profiles, with a focus on ATS compatibility, keyword optimization, content quality, and professional branding.
+---
 
-## Key Features
+## 🚀 Features
 
 - CV analysis and improvement
-- LinkedIn profile enhancement
+- PDF and DOCX CV upload
+- LinkedIn profile optimization
 - Retrieval-Augmented Generation (RAG)
-- Context-aware recommendations
-- ATS compatibility optimization
+- Semantic document retrieval
+- Context-aware AI responses
+- ATS-friendly CV recommendations
 - Keyword optimization
 - Professional summary improvement
 - Personalized career recommendations
+- Conversation history support
+- CV keyword and content analysis
 - Knowledge-base-powered responses
+- Fallback LLM model for improved reliability
 
-## How It Works
+---
 
-1. The user provides their CV or LinkedIn content.
-2. Relevant information is retrieved from the knowledge base.
-3. The retrieved context is combined with the user's information.
-4. The LLM generates personalized recommendations.
-5. The chatbot provides actionable suggestions for improving the profile.
+## 🧠 How It Works
 
-## Technologies
+The system combines a knowledge base, semantic retrieval, and an LLM to generate personalized career recommendations.
 
-- Python
-- NLP
-- Large Language Models (LLMs)
-- Retrieval-Augmented Generation (RAG)
-- Vector/Document Retrieval
-- [Add the exact libraries/frameworks you used]
+### Workflow
 
-## Project Goals
+1. The user asks a question about their CV or LinkedIn profile.
+2. The system checks the career knowledge base for an exact matching question.
+3. If no exact match is found, relevant documents are retrieved using semantic similarity.
+4. The retrieved context is combined with the user's question and conversation history.
+5. If a CV is uploaded, its extracted content is added to the context.
+6. The LLM generates a personalized response.
+7. The chatbot returns actionable recommendations to the user.
 
-The goal is to build an intelligent career assistant that helps users create stronger, more ATS-compatible CVs and professional LinkedIn profiles through personalized AI-driven feedback.
+---
 
-## Future Improvements
+## 🏗️ System Architecture
 
-- Job-description matching
-- Automated keyword extraction
-- CV scoring
-- Multiple CV templates
-- LinkedIn profile scoring
-- Job-specific CV optimization
-  
+```text
+User
+ │
+ ▼
+Streamlit Web Interface
+ │
+ ├── CV Upload (PDF / DOCX)
+ │
+ ▼
+CV Processing
+ │
+ ├── Text Extraction
+ ├── Keyword Analysis
+ └── Recommendations
+ │
+ ▼
+Chatbot
+ │
+ ├── Exact Question Matching
+ │
+ └── Semantic Retrieval
+       │
+       ▼
+   ChromaDB Vector Store
+       │
+       ▼
+   Retrieved Context
+       │
+       ▼
+     Groq LLM
+       │
+       ▼
+Personalized Career Recommendations
