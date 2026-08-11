@@ -1,0 +1,11 @@
+streamlit
+transformers
+sentence-transformers
+chromadb
+pandas
+torch
+faiss-cpu
+groq
+PyPDF2
+python-docx
+pytest
